@@ -7,6 +7,6 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/ne
 WORKDIR /var/www/html
 RUN unzip neogym.zip
 RUN cp -R neogym-html/* .
-RUN rm -rf oxer.zip
+RUN rm -rf neogym.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
