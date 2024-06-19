@@ -1,4 +1,4 @@
-FROM amazonlinux
+FROM amazonlinux:latest
 MAINTAINER vivektech.kumar@gmail.com
 RUN yum install httpd -y \
   zip \
@@ -9,4 +9,4 @@ RUN unzip neogym.zip
 RUN cp -R neogym-html/* .
 RUN rm -rf oxer.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-expose 80
+EXPOSE 80
